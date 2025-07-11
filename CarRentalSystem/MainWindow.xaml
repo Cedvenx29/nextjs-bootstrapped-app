@@ -8,13 +8,13 @@
             <!-- Cars Tab -->
             <TabItem Header="Cars">
                 <Grid Margin="10">
-                    <DataGrid Name="CarsDataGrid" AutoGenerateColumns="False" IsReadOnly="True">
+                    <DataGrid Name="CarsDataGrid" AutoGenerateColumns="False" IsReadOnly="True" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False" SelectionMode="Single" SelectionUnit="FullRow">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
                             <DataGridTextColumn Header="Make" Binding="{Binding Make}" Width="*"/>
                             <DataGridTextColumn Header="Model" Binding="{Binding Model}" Width="*"/>
                             <DataGridTextColumn Header="Year" Binding="{Binding Year}" Width="*"/>
-                            <DataGridTextColumn Header="Available" Binding="{Binding IsAvailable}" Width="*"/>
+                            <DataGridCheckBoxColumn Header="Available" Binding="{Binding IsAvailable}" Width="*"/>
                         </DataGrid.Columns>
                     </DataGrid>
                 </Grid>
@@ -23,7 +23,7 @@
             <!-- Customers Tab -->
             <TabItem Header="Customers">
                 <Grid Margin="10">
-                    <DataGrid Name="CustomersDataGrid" AutoGenerateColumns="False" IsReadOnly="True">
+                    <DataGrid Name="CustomersDataGrid" AutoGenerateColumns="False" IsReadOnly="True" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False" SelectionMode="Single" SelectionUnit="FullRow">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
                             <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="*"/>
@@ -37,7 +37,7 @@
             <!-- Rentals Tab -->
             <TabItem Header="Rentals">
                 <Grid Margin="10">
-                    <DataGrid Name="RentalsDataGrid" AutoGenerateColumns="False" IsReadOnly="True">
+                    <DataGrid Name="RentalsDataGrid" AutoGenerateColumns="False" IsReadOnly="True" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False" SelectionMode="Single" SelectionUnit="FullRow">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
                             <DataGridTextColumn Header="Car" Binding="{Binding CarDisplay}" Width="*"/>
@@ -49,6 +49,7 @@
                     </DataGrid>
                 </Grid>
             </TabItem>
+
             <!-- New Booking Tab -->
             <TabItem Header="New Booking">
                 <Grid Margin="10">
